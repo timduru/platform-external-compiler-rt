@@ -73,6 +73,7 @@ asan_rtl_cflags := \
 	-Wno-covered-switch-default \
 	-Wno-sign-compare \
 	-Wno-unused-parameter \
+        -fno-lto \
 	-D__WORDSIZE=32
 
 asan_test_files := \
@@ -92,6 +93,7 @@ asan_test_cflags := \
 	-Wno-covered-switch-default \
 	-Wno-sign-compare \
 	-Wno-unused-parameter \
+        -fno-lto \
 	-D__WORDSIZE=32
 
 

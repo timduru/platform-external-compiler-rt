@@ -294,6 +294,8 @@ define build-libcompiler-rt
   ifeq ($$(arch),arm)
     LOCAL_CFLAGS += -D__ARM_EABI__
   endif
+LOCAL_CFLAGS += -fno-lto
+
 
   # Use MC assembler to compile assembly
   LOCAL_ASFLAGS += -integrated-as
@@ -331,6 +333,8 @@ LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 LOCAL_CLANG := true
 LOCAL_SRC_FILES := $(libcompiler_rt_extras_SRC_FILES)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+
+LOCAL_CFLAGS += -fno-lto
 
 include $(BUILD_STATIC_LIBRARY)
 
